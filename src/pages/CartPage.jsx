@@ -51,13 +51,13 @@ const CartModal = () => {
               {/* Item Image */}
               <img
                 src={item.image}
-                alt={item.name}
+                alt={item.title}
                 className="w-16 h-16 object-cover rounded-md border"
               />
               {/* Item Details */}
               <div className="flex-1 mx-3">
                 <p className="text-sm font-semibold text-gray-800">
-                  {item.name}
+                  {item.title}
                 </p>
                 <p className="text-sm text-red-500 font-bold">₹{item.price}</p>
               </div>

@@ -1,5 +1,5 @@
 import card from "./card.svg";
-import visa from "./visa.svg";
+import visa from "../Home/paymentsec.png";
 import cod from "./cod.svg";
 import master from "./master.svg";
 import face from "./face.svg";

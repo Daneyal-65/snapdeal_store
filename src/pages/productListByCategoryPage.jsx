@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Prodoctstore } from "../constants/data";
-import { updateDetails } from "../store/reducer";
 
 import { useAuth0 } from "@auth0/auth0-react";
 import { useDispatch, useSelector } from "react-redux";
@@ -45,11 +44,12 @@ export default function productListByCategoryPage() {
   }, [category]);
   return (
     // {product list }
-    <div className="grid grid-cols-4 gap-4 px-2">
+    <div className="grid grid-cols-3 gap-4 max-w-7xl mx-auto px-4 relative pt-4">
       {products.map((product) => (
         <div
           key={product.id}
-          className="border p-4 rounded-md text-center bg-white shadow"
+          className="border p-4 rounded-md text-center bg-white 
+          shadow hover:shadow-2xl hover:transition-all duration-1000 ease-out"
         >
           <img
             src={product.image}

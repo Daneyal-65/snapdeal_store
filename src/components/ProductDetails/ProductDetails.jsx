@@ -5,6 +5,7 @@ import ProductSpecifications from "./extraDetails";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../../store/menu";
 import { addToCart } from "../../store/cart";
+import { Prodoctstore } from "../../constants/data";
 
 const ProductDetails = () => {
   const [product, setProduct] = useState({});
@@ -19,7 +20,9 @@ const ProductDetails = () => {
     axios
       .get("https://fakestoreapi.com/products")
       .then((res) => {
-        const foundProduct = res.data.find((prod) => prod.id === Number(id));
+        let foundProduct = res.data.find((prod) => prod.id === Number(id));
+        foundProduct =
+          foundProduct || Prodoctstore.find((prod) => prod.id === Number(id));
         setProduct(foundProduct || {});
         // console.log(product);
       })

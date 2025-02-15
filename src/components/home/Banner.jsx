@@ -12,11 +12,11 @@ export default function Banner() {
   };
 
   const carouselNavigationButtons = [
-    "BOB",
-    "Health",
-    "Westernwear",
-    "Kurta Sets",
-    "Kitchen Needs",
+    "BOB CARD",
+    "ONDCFestive",
+    "India @100 : Envisioning Tomorrow’s ",
+    "Sports Footwear",
+    "ETHNIC WEAR",
   ];
 
   useEffect(() => {
@@ -54,17 +54,15 @@ export default function Banner() {
         ))}
       </div>
       {/* Navigation Dots */}
-      <div className="flex justify-around w-[90%]  my-2">
+      <div className="flex justify-between w-[90%] my-2 text-gray-600 text-sm">
         {carouselNavigationButtons.map((label, index) => (
           <button
             key={index}
-            className={`transition-all p-1 px-2 rounded shadow hover:shadow-2xl ${
-              index === current
-                ? "bg-gray-100  border-black" // Active dot
-                : "bg-red-500" // Inactive dot
+            className={`transition-all hover:underline ${
+              index === current ? "font-semibold text-black" : ""
             }`}
-            onClick={() => goToSlide(index)} // Change slide on click
-            aria-label={`Go to slide ${index + 1}`} // Accessibility
+            onClick={() => goToSlide(index)}
+            aria-label={`Go to slide ${index + 1}`}
           >
             {label}
           </button>

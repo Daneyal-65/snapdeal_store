@@ -134,360 +134,520 @@
     "title": "Chef's Knife",
     "description": "A versatile knife for chopping, slicing, and dicing.",
     "category": "Kitchen",
-    "image": "https://m.media-amazon.com/images/I/719xN9n2j4L._AC_SL1500_.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzMizIGuHd0Qv_mGnzNN5CNL0dg7o_G26SjA&s",
     "rating": {
       "rate": 4.5,
       "count": 250
     },
-    "seller": "Zwilling J.A. Henckels"
+    "seller": "Zwilling J.A. Henckels",
+    "price": 79.99
   },
   {
     "id": 71,
     "title": "Non-Stick Frying Pan",
     "description": "Perfect for cooking eggs, pancakes, and other delicate foods.",
     "category": "Kitchen",
-    "image": "https://m.media-amazon.com/images/I/71n9m66Xk-L._AC_SL1500_.jpg",
+    "image": "https://m.media-amazon.com/images/I/81COU6udPbL.jpg",
     "rating": {
       "rate": 4.2,
       "count": 380
     },
-    "seller": "T-fal"
+    "seller": "T-fal",
+    "price": 29.99
   },
   {
     "id": 72,
     "title": "Stand Mixer",
     "description": "A powerful mixer for baking cakes, cookies, and bread.",
     "category": "Kitchen",
-    "image": "https://m.media-amazon.com/images/I/81vJ9S9zE-L._AC_SL1500_.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT83MnH12V4tfuJOK2bqk7cZshHaTEy-wJZ3Q&s",
     "rating": {
       "rate": 4.8,
       "count": 180
     },
-    "seller": "KitchenAid"
+    "seller": "KitchenAid",
+    "price": 399.99
   },
   {
     "id": 73,
     "title": "Cutting Board Set",
     "description": "A set of multiple cutting boards for different food types.",
     "category": "Kitchen",
-    "image": "https://m.media-amazon.com/images/I/71g69B2o78L._AC_SL1500_.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjZ-cIvIu3aBpo5id6wQdwQJfI6MqW2ll3Vg&s",
     "rating": {
       "rate": 4,
       "count": 220
     },
-    "seller": "Epicurean"
+    "seller": "Epicurean",
+    "price": 49.99
   },
   {
     "id": 74,
     "title": "Blender",
     "description": "Great for making smoothies, soups, and sauces.",
     "category": "Kitchen",
-    "image": "https://m.media-amazon.com/images/I/81k1uX51-PL._AC_SL1500_.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW9YuGhdfkEqT-STiJvTKjwXs1WJUYGcfqpQ&s",
     "rating": {
       "rate": 4.6,
       "count": 310
     },
-    "seller": "Ninja"
+    "seller": "Ninja",
+    "price": 149.99
   },
   {
     "id": 75,
     "title": "Mixing Bowl Set",
     "description": "A set of various sized mixing bowls for all your cooking needs.",
     "category": "Kitchen",
-    "image": "https://m.media-amazon.com/images/I/71v2jV89JHL._AC_SL1500_.jpg",
+    "image": "https://myborosil.com/cdn/shop/products/my-borosil-mixing-serving-bowls-500-ml-900-ml-1-3l-mixing-bowl-w-white-lid-set-of-3-29680779657354.jpg",
     "rating": {
       "rate": 4.3,
       "count": 290
     },
-    "seller": "OXO"
+    "seller": "OXO",
+    "price": 39.99
   },
   {
     "id": 76,
     "title": "Dutch Oven",
     "description": "Ideal for braising, stewing, and baking.",
     "category": "Kitchen",
-    "image": "https://m.media-amazon.com/images/I/7106g79w72L._AC_SL1500_.jpg",
+    "image": "https://m.media-amazon.com/images/I/71+aklrmqhL.jpg",
     "rating": {
       "rate": 4.7,
       "count": 160
     },
-    "seller": "Le Creuset"
+    "seller": "Le Creuset",
+    "price": 299.99
   },
   {
     "id": 77,
     "title": "Toaster Oven",
     "description": "A versatile appliance for toasting, baking, and broiling.",
     "category": "Kitchen",
-    "image": "https://m.media-amazon.com/images/I/712Xk-g59YL._AC_SL1500_.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdHcdKk6-sGz2E9Y5boBUh8aFyFjTkazIMkw&s",
     "rating": {
       "rate": 4.1,
       "count": 270
     },
-    "seller": "Breville"
+    "seller": "Breville",
+    "price": 199.99
   },
   {
     "id": 78,
     "title": "Colander",
     "description": "Used for draining pasta, vegetables, and other foods.",
     "category": "Kitchen",
-    "image": "https://m.media-amazon.com/images/I/71k4n4c-6cL._AC_SL1500_.jpg",
+    "image": "https://images-cdn.ubuy.co.in/64eda3b8330289465d66af3d-farberware-5-quart-soft-grips-colander.jpg",
     "rating": {
       "rate": 4.4,
       "count": 200
     },
-    "seller": "KitchenAid"
+    "seller": "KitchenAid",
+    "price": 19.99
   },
   {
     "id": 79,
     "title": "Food Processor",
     "description": "A multi-functional appliance for chopping, slicing, and pureeing.",
     "category": "Kitchen",
-    "image": "https://m.media-amazon.com/images/I/718k966u7jL._AC_SL1500_.jpg",
+    "image": "https://rukminim2.flixcart.com/image/850/1000/xif0q/food-processor/i/y/5/i-chef-food-processor-i-chef-800-15-usha-12-original-imagvay3wgjapdvm.jpeg?q=20&crop=false",
     "rating": {
       "rate": 4.5,
       "count": 330
     },
-    "seller": "Cuisinart"
+    "seller": "Cuisinart",
+    "price": 249.99
   },
   {
     "id": 80,
     "title": "Classic Aviator Sunglasses",
     "description": "Timeless aviator style with polarized lenses.",
     "category": "Sunglasses",
-    "image": "https://m.media-amazon.com/images/I/719xN9n2j4L._AC_SL1500_.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeTVDUeBfjnVdStjImVQHtYytdoMuwn1owVw&s",
     "rating": {
       "rate": 4.5,
       "count": 250
     },
-    "seller": "Ray-Ban"
+    "seller": "Ray-Ban",
+    "price": 149.99
   },
   {
     "id": 81,
     "title": "Sport Sunglasses",
     "description": "Durable and lightweight sunglasses for sports activities.",
     "category": "Sunglasses",
-    "image": "https://m.media-amazon.com/images/I/71n9m66Xk-L._AC_SL1500_.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR69ZwcM6VkMv_uoOSvtDhWKUCtl0-sXIoNpQ&s",
     "rating": {
       "rate": 4.2,
       "count": 380
     },
-    "seller": "Oakley"
+    "seller": "Oakley",
+    "price": 129.99
   },
   {
     "id": 82,
     "title": "Retro Square Sunglasses",
     "description": "Trendy square sunglasses with a vintage look.",
     "category": "Sunglasses",
-    "image": "https://m.media-amazon.com/images/I/81vJ9S9zE-L._AC_SL1500_.jpg",
+    "image": "https://m.media-amazon.com/images/I/61oTHr88NcL._AC_UY1100_.jpg",
     "rating": {
       "rate": 4.8,
       "count": 180
     },
-    "seller": "Persol"
+    "seller": "Persol",
+    "price": 179.99
   },
   {
     "id": 83,
     "title": "Cat Eye Sunglasses",
     "description": "Stylish cat eye sunglasses for a chic look.",
     "category": "Sunglasses",
-    "image": "https://m.media-amazon.com/images/I/71g69B2o78L._AC_SL1500_.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoHKuKoFysMOR6CwEaJnTLdueESya9uTKL2A&s",
     "rating": {
       "rate": 4,
       "count": 220
     },
-    "seller": "Prada"
+    "seller": "Prada",
+    "price": 249.99
   },
   {
     "id": 84,
     "title": "Round Sunglasses",
     "description": "Classic round sunglasses with a retro vibe.",
     "category": "Sunglasses",
-    "image": "https://m.media-amazon.com/images/I/81k1uX51-PL._AC_SL1500_.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRC07dp5yHNk7q5XnJMAR9Y7UIv1YLpJStqQ&s",
     "rating": {
       "rate": 4.6,
       "count": 310
     },
-    "seller": "Ray-Ban"
+    "seller": "Ray-Ban",
+    "price": 139.99
   },
   {
     "id": 85,
     "title": "Oversized Sunglasses",
     "description": "Bold and fashionable oversized sunglasses.",
     "category": "Sunglasses",
-    "image": "https://m.media-amazon.com/images/I/71v2jV89JHL._AC_SL1500_.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSjS49dBUH8XklKdquoRPINWW1XA33IuUyeg&s",
     "rating": {
       "rate": 4.3,
       "count": 290
     },
-    "seller": "Gucci"
+    "seller": "Gucci",
+    "price": 299.99
   },
   {
     "id": 86,
     "title": "Rimless Sunglasses",
     "description": "Lightweight and minimalist rimless sunglasses.",
     "category": "Sunglasses",
-    "image": "https://m.media-amazon.com/images/I/7106g79w72L._AC_SL1500_.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb-2mLHaEDeUk7a4peM1bHZOBEj7B38xlssw&s",
     "rating": {
       "rate": 4.7,
       "count": 160
     },
-    "seller": "Silhouette"
+    "seller": "Silhouette",
+    "price": 199.99
   },
   {
     "id": 87,
     "title": "Mirrored Sunglasses",
     "description": "Trendy mirrored sunglasses with reflective lenses.",
     "category": "Sunglasses",
-    "image": "https://m.media-amazon.com/images/I/712Xk-g59YL._AC_SL1500_.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2hrbkHiL_O6bdki63U0pStFXLEl-RCKgEtw&s",
     "rating": {
       "rate": 4.1,
       "count": 270
     },
-    "seller": "Maui Jim"
+    "seller": "Maui Jim",
+    "price": 229.99
   },
   {
     "id": 88,
     "title": "Polarized Sunglasses",
     "description": "Sunglasses with polarized lenses to reduce glare.",
     "category": "Sunglasses",
-    "image": "https://m.media-amazon.com/images/I/71k4n4c-6cL._AC_SL1500_.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeTVDUeBfjnVdStjImVQHtYytdoMuwn1owVw&s",
     "rating": {
       "rate": 4.4,
       "count": 200
     },
-    "seller": "Costa"
+    "seller": "Costa",
+    "price": 219.99
   },
   {
     "id": 89,
     "title": "Driving Sunglasses",
     "description": "Sunglasses designed for optimal clarity while driving.",
     "category": "Sunglasses",
-    "image": "https://m.media-amazon.com/images/I/718k966u7jL._AC_SL1500_.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeTVDUeBfjnVdStjImVQHtYytdoMuwn1owVw&s",
     "rating": {
       "rate": 4.5,
       "count": 330
     },
-    "seller": "Randolph Engineering"
+    "seller": "Randolph Engineering",
+    "price": 279.99
   },
   {
     "id": 90,
     "title": "Building Blocks Set",
     "description": "Colorful building blocks for imaginative play.",
     "category": "Kids Clothing & Toys",
-    "image": "https://m.media-amazon.com/images/I/81p1cpbC2JL._AC_SL1500_.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMAc09HXZA0RWBD8tfTpdexr8WYdTA6343ow&s",
     "rating": {
       "rate": 4.7,
       "count": 120
     },
-    "seller": "LEGO"
+    "seller": "LEGO",
+    "price": 29.99
   },
   {
     "id": 91,
     "title": "Stuffed Animal",
     "description": "Soft and cuddly plush toy for kids of all ages.",
     "category": "Kids Clothing & Toys",
-    "image": "https://m.media-amazon.com/images/I/81XXvBPtPBL._AC_SL1500_.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9xPc7acYSRSzo2O4nBq5AU87jyZs9h3vuoQ&s",
     "rating": {
       "rate": 4.5,
       "count": 280
     },
-    "seller": "Melissa & Doug"
+    "seller": "Melissa & Doug",
+    "price": 14.99
   },
   {
     "id": 92,
     "title": "Board Game",
     "description": "Fun and engaging board game for family game night.",
     "category": "Kids Clothing & Toys",
-    "image": "https://m.media-amazon.com/images/I/91UqVej1VSL._AC_SL1500_.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnDrB1_NeY8n-Tkm45EylE-TNWCBd51ds9kQ&s",
     "rating": {
       "rate": 4.3,
       "count": 150
     },
-    "seller": "Hasbro"
+    "seller": "Hasbro",
+    "price": 19.99
   },
   {
     "id": 93,
     "title": "Art Set",
     "description": "Complete art set with crayons, markers, and paints.",
     "category": "Kids Clothing & Toys",
-    "image": "https://m.media-amazon.com/images/I/81fW2iWd3uL._AC_SL1500_.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx6QF54Pdx1pAWm1jDpV9VqMYw5fdJ6hILlQ&s",
     "rating": {
       "rate": 4.6,
       "count": 210
     },
-    "seller": "Crayola"
+    "seller": "Crayola",
+    "price": 24.99
   },
   {
     "id": 94,
     "title": "Kids Sneakers",
     "description": "Comfortable and stylish sneakers for kids.",
     "category": "Kids Clothing & Toys",
-    "image": "https://m.media-amazon.com/images/I/71E7F72G78L._AC_UY500_.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwID1uxM5oB6aiha0Bi6b2ErHRKEdVvkKjhg&s",
     "rating": {
       "rate": 4.4,
       "count": 330
     },
-    "seller": "Nike"
+    "seller": "Nike",
+    "price": 49.99
   },
   {
     "id": 95,
     "title": "Kids Dress",
     "description": "Beautiful and comfortable dress for girls.",
     "category": "Kids Clothing & Toys",
-    "image": "https://m.media-amazon.com/images/I/713QyhL9+AL._AC_UY879_.jpg",
+    "image": "https://m.media-amazon.com/images/I/81vzN1tTfoL._AC_UY1000_.jpg",
     "rating": {
       "rate": 4.2,
       "count": 180
     },
-    "seller": "Carter's"
+    "seller": "Carter's",
+    "price": 29.99
   },
   {
     "id": 96,
     "title": "Kids T-shirt",
     "description": "Fun and colorful t-shirt for kids.",
     "category": "Kids Clothing & Toys",
-    "image": "https://m.media-amazon.com/images/I/81L3N693t7L._AC_UY879_.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC9eq8tZnG81MjoodqxMfBY2RWRoXVgswYmA&s",
     "rating": {
       "rate": 4,
       "count": 260
     },
-    "seller": "Gap Kids"
+    "seller": "Gap Kids",
+    "price": 12.99
   },
   {
     "id": 97,
     "title": "Kids Jeans",
     "description": "Durable and stylish jeans for kids.",
     "category": "Kids Clothing & Toys",
-    "image": "https://m.media-amazon.com/images/I/81z2bJEtC3L._AC_UY879_.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJmBys4cIEKxSyju-XsqdEN7jRQun-fUstAw&s",
     "rating": {
       "rate": 4.5,
       "count": 290
     },
-    "seller": "Levi's"
+    "seller": "Levi's",
+    "price": 34.99
   },
   {
     "id": 98,
     "title": "Kids Pajamas",
     "description": "Comfortable and cozy pajamas for a good night's sleep.",
     "category": "Kids Clothing & Toys",
-    "image": "https://m.media-amazon.com/images/I/71hGpXDbM8L._AC_UY879_.jpg",
+    "image": "https://www.mumkins.in/cdn/shop/products/boys-jeans-bl062461c-lightblue-4_1800x1800.jpg?v=1651205311",
     "rating": {
       "rate": 4.7,
       "count": 170
     },
-    "seller": "Hanna Andersson"
+    "seller": "Hanna Andersson",
+    "price": 39.99
   },
   {
     "id": 99,
     "title": "Kids Socks",
     "description": "Soft and colorful socks for kids.",
     "category": "Kids Clothing & Toys",
-    "image": "https://m.media-amazon.com/images/I/81XJgYnEucL._AC_UY879_.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6HkKd6GpLC79x-c14K2ScNrZLjPZyh08-4g&s",
     "rating": {
       "rate": 4.3,
       "count": 240
     },
-    "seller": "Old Navy"
+    "seller": "Old Navy",
+    "price": 9.99
+  },
+  {
+    "id": 60,
+    "title": "Nike Air Zoom Pegasus 39",
+    "price": 129.99,
+    "description": "Lightweight running shoes with responsive cushioning for maximum comfort.",
+    "category": "shoes",
+    "image": "https://images-cdn.ubuy.co.in/653856ae7dd04070b012af4f-nike-women-39-s-air-zoom-pegasus-39.jpg",
+    "rating": {
+      "rate": 4.5,
+      "count": 230
+    },
+    "seller": "Nike Inc."
+  },
+  {
+    "id": 61,
+    "title": "Adidas Ultraboost 22",
+    "price": 149.99,
+    "description": "High-performance running shoes with Boost cushioning for energy return.",
+    "category": "shoes",
+    "image": "https://m.media-amazon.com/images/I/61hgDVyPu+L._AC_UY1000_.jpg",
+    "rating": {
+      "rate": 4.7,
+      "count": 190
+    },
+    "seller": "Adidas AG"
+  },
+  {
+    "id": 62,
+    "title": "Puma RS-X Bold",
+    "price": 109.99,
+    "description": "Retro-style sneakers with a bold design and comfortable fit.",
+    "category": "shoes",
+    "image": "https://www.puma-catchup.com/wp-content/uploads/2019/09/RS-X-Bold_H.jpg",
+    "rating": {
+      "rate": 4.2,
+      "count": 160
+    },
+    "seller": "Puma SE"
+  },
+  {
+    "id": 63,
+    "title": "Reebok Nano X3",
+    "price": 119.99,
+    "description": "Versatile training shoes designed for all types of workouts.",
+    "category": "shoes",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLYoNIMVJaGmCHHmf-cNOAwmpD2k_hPedFGg&s",
+    "rating": {
+      "rate": 4.6,
+      "count": 145
+    },
+    "seller": "Reebok International Ltd."
+  },
+  {
+    "id": 64,
+    "title": "Under Armour HOVR Sonic 4",
+    "price": 99.99,
+    "description": "Running shoes with UA HOVR technology for zero gravity feel.",
+    "category": "shoes",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYlQgfOJx2Lq0eCvg5mcXPJpT3RNP3fsgeMQ&s",
+    "rating": {
+      "rate": 4.3,
+      "count": 180
+    },
+    "seller": "Under Armour, Inc."
+  },
+  {
+    "id": 65,
+    "title": "ASICS Gel-Kayano 29",
+    "price": 159.99,
+    "description": "Premium stability running shoes with superior cushioning.",
+    "category": "shoes",
+    "image": "https://www.asics.co.in/media/catalog/product/1/0/1011b440_404_sr_rt_glb-base.jpg",
+    "rating": {
+      "rate": 4.8,
+      "count": 220
+    },
+    "seller": "ASICS Corporation"
+  },
+  {
+    "id": 66,
+    "title": "New Balance Fresh Foam 1080v12",
+    "price": 139.99,
+    "description": "Plush running shoes with Fresh Foam midsole for ultimate comfort.",
+    "category": "shoes",
+    "image": "https://images-cdn.ubuy.co.in/66c574577d8e162fcf6d39ca-new-balance-men-39-s-fresh-foam-x-1080.jpg",
+    "rating": {
+      "rate": 4.4,
+      "count": 170
+    },
+    "seller": "New Balance Athletics, Inc."
+  },
+  {
+    "id": 67,
+    "title": "Skechers Go Run Razor 3",
+    "price": 89.99,
+    "description": "Lightweight, fast running shoes designed for speed workouts.",
+    "category": "shoes",
+    "image": "https://m.media-amazon.com/images/I/71HqTLmRcEL._SX625_.jpg",
+    "rating": {
+      "rate": 4.1,
+      "count": 140
+    },
+    "seller": "Skechers USA, Inc."
+  },
+  {
+    "id": 68,
+    "title": "Mizuno Wave Rider 26",
+    "price": 129.99,
+    "description": "Durable and well-cushioned running shoes for long-distance running.",
+    "category": "shoes",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyT1hiajch0O3dCbtgBYVE0aLyb5AcaBpyjA&s",
+    "rating": {
+      "rate": 4.5,
+      "count": 200
+    },
+    "seller": "Mizuno Corporation"
+  },
+  {
+    "id": 69,
+    "title": "Salomon Speedcross 5",
+    "price": 139.99,
+    "description": "Trail running shoes with aggressive grip and enhanced stability.",
+    "category": "shoes",
+    "image": "https://m.media-amazon.com/images/I/81sScaGAs9L._AC_UY1000_.jpg",
+    "rating": {
+      "rate": 4.7,
+      "count": 210
+    },
+    "seller": "Salomon Group"
   },
   {
     "id": 1,

@@ -21,7 +21,7 @@ const trendingSearches = [
   "Sandal Men",
   "Sport Shoe Men",
 ];
-export default function Sidebar() {
+export default function Sidebar({ onClick }) {
   const [activeCategory, setActiveCategory] = useState(null);
   const getCategory = (uri) => {
     if (uri === "EYEWEAR") return "/productlist/Sunglasses";
@@ -64,7 +64,7 @@ export default function Sidebar() {
               onMouseLeave={() => setActiveCategory(null)}
             >
               <a
-                href="#"
+                href={getCategory(name)}
                 className="flex items-center gap-3 p-2 transition-all duration-1000 ease-in-out hover:bg-gray-50 rounded-md group"
               >
                 <span className="text-xl">{data.icon}</span>
@@ -76,7 +76,10 @@ export default function Sidebar() {
 
               {/* Mega Menu */}
               {activeCategory === name && (
-                <div className="absolute left-full top-0  w-[800px] bg-white shadow-xl rounded-md z-50 flex ">
+                <div
+                  className="absolute left-full top-0  w-[800px] bg-white shadow-xl rounded-md z-50 flex "
+                  onClick={onClick}
+                >
                   <div className="flex-1 grid grid-cols-3 gap-6 p-6">
                     {Object.entries(data.sections).map(([title, section]) => (
                       <div key={title}>

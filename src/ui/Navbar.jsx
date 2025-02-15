@@ -185,7 +185,7 @@ export default function Header() {
           </div>
           {/* side bar */}
           <div className="absolute z-10">
-            {isMenuActive && menu && <Sidebar />}
+            {isMenuActive && menu && <Sidebar onClick={handleMenuClick} />}
           </div>
         </div>
       </div>

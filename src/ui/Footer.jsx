@@ -1,10 +1,7 @@
 import { ShieldCheck, Lock, MessageCircle, Smartphone } from "lucide-react";
 import {
-  card,
-  cod,
   face,
   insta,
-  master,
   telegram,
   visa,
   whatsapp,
@@ -57,7 +54,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-
       {/* Links Section */}
       <div className="grid grid-cols-1 md:grid-cols-5 gap-8 p-8">
         <div>
@@ -166,10 +162,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">PAYMENT</h4>
             <div className="flex gap-4">
-              <img src={visa} alt="visa" className="w-10 h-6 rounded" />
-              <img src={master} alt="master" className="w-10 h-6 rounded" />
-              <img src={card} alt="card" className="w-10 h-6 rounded" />
-              <img src={cod} alt="cod" className="w-10 h-6 rounded" />
+              <img src={visa} alt="visa" className=" rounded" />
             </div>
           </div>
 
