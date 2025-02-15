@@ -16,11 +16,9 @@ const ProductListByCategoryPage = lazy(() =>
 const ProductDetailsPage = lazy(() => import("./pages/productDetailsPage"));
 const CheckoutPage = lazy(() => import("./pages/CheckOut"));
 const Login = lazy(() => import("./auth/login"));
-const WishListPage = lazy(() => import("./pages/wishList"));
 function App() {
   const isOpen = useSelector((state) => state.cart.toggle);
   const [loading, setLoading] = useState(true);
-  const { isAuthenticated } = useAuth0();
   useEffect(() => {
     const loadTime = setTimeout(() => {
       setLoading(false);
@@ -54,14 +52,6 @@ function App() {
 
             {/* Protected Routes */}
 
-            <Route
-              path="/wishlist"
-              element={
-                <ProtectedRoutes>
-                  <WishListPage />
-                </ProtectedRoutes>
-              }
-            />
             <Route
               path="/checkout/:id"
               element={
