@@ -45,7 +45,7 @@ const CartModal = () => {
         ) : (
           cartItems.map((item) => (
             <div
-              key={item.id}
+              key={`${item.id} ${item.title}`}
               className="flex items-center justify-between p-3 border-b"
             >
               {/* Item Image */}

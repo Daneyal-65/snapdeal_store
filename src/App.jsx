@@ -17,8 +17,8 @@ const ProductListByCategoryPage = lazy(() =>
 const ProductDetailsPage = lazy(() => import("./pages/productDetailsPage"));
 const CheckoutPage = lazy(() => import("./pages/CheckOut"));
 const Login = lazy(() => import("./auth/login"));
-const { isAuthenticated, user } = useAuth0();
 function App() {
+  const { isAuthenticated, user } = useAuth0();
   const isOpen = useSelector((state) => state.cart.toggle);
   const [loading, setLoading] = useState(true);
   useEffect(() => {

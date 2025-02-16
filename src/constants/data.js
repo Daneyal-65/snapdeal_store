@@ -1895,38 +1895,38 @@ export const KidsData = [
   },
 ];
 
-const newData = Prodoctstore.map((item) => {
-  const data = {
-    name: item.title,
-    price: item.price,
-    offPrice: Math.floor(item.price * 0.7),
-    image: item.image,
-    rating: { rate: item.rating.rate, count: item.rating.count },
-    size: item.category.toLocaleLowerCase().includes("cloth")
-      ? ["XS", "S", "M", "XL", "XXL"]
-      : ["v1", "v2"],
-    category: item.category,
-    subCategory: item.category.slice(0, 15),
-  };
-  return data;
-});
-import fs from "fs";
+// const newData = Prodoctstore.map((item) => {
+//   const data = {
+//     name: item.title,
+//     price: item.price,
+//     offPrice: Math.floor(item.price * 0.7),
+//     image: item.image,
+//     rating: { rate: item.rating.rate, count: item.rating.count },
+//     size: item.category.toLocaleLowerCase().includes("cloth")
+//       ? ["XS", "S", "M", "XL", "XXL"]
+//       : ["v1", "v2"],
+//     category: item.category,
+//     subCategory: item.category.slice(0, 15),
+//   };
+//   return data;
+// });
+// import fs from "fs";
 
-const filePath = "output.txt";
-// // const newdata = [
-// //   ...shoesData,
-// //   ...kitchenData,
-// //   ...sunGlasses,
-// //   ...KidsData,
-// //   ...Prodoctstore,
-// // ];
-// // const len = { length: newdata.length };
-// // console.log(len);
+// const filePath = "output.txt";
+// // // const newdata = [
+// // //   ...shoesData,
+// // //   ...kitchenData,
+// // //   ...sunGlasses,
+// // //   ...KidsData,
+// // //   ...Prodoctstore,
+// // // ];
+// // // const len = { length: newdata.length };
+// // // console.log(len);
 
-fs.writeFile(filePath, JSON.stringify(newData, null, 2), (err) => {
-  if (err) {
-    console.error("Error writing file:", err);
-  } else {
-    console.log("File saved successfully!");
-  }
-});
+// fs.writeFile(filePath, JSON.stringify(newData, null, 2), (err) => {
+//   if (err) {
+//     console.error("Error writing file:", err);
+//   } else {
+//     console.log("File saved successfully!");
+//   }
+// });

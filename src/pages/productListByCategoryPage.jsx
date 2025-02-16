@@ -45,9 +45,9 @@ export default function productListByCategoryPage() {
   return (
     // {product list }
     <div className="grid grid-cols-3 gap-4 max-w-7xl mx-auto px-4 relative pt-4">
-      {products.map((product) => (
+      {products.map((product, index) => (
         <div
-          key={product.id}
+          key={index}
           className="border p-4 rounded-md text-center bg-white 
           shadow hover:shadow-2xl hover:transition-all duration-1000 ease-out"
         >
