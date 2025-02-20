@@ -43,4 +43,12 @@ The backend is developed using **Node.js** and **Express.js**, ensuring efficien
 
 ### **Clone the repository**
 ```bash
-git clone https://github.com/your-username/snapdeal-clone
+git clone https://github.com/Daneyal-65/snapdeal_store/
+```
+```bash
+cd snapdeal_store
+npm install
+```
+```bash
+npm run dev
+```
