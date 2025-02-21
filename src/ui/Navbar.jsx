@@ -1,34 +1,24 @@
 import { useRef, useState } from "react";
-import {
-  Search,
-  ShoppingCart,
-  User,
-  ChevronDown,
-  Gift,
-  Package,
-  Menu,
-} from "lucide-react";
+import { Search, User, ChevronDown, Gift, Package, Menu } from "lucide-react";
 import Sidebar from "./Sidebar";
 import { useDispatch, useSelector } from "react-redux";
 import { searchData } from "../constants/data";
-import LoginModal from "../auth/login";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Link, useNavigate } from "react-router-dom";
-import Button from "./Button";
-import { isOpen } from "../store/cart";
+import LogoutButton from "../auth/logout";
+import LoginModal from "../auth/LoginModal";
+import CartModal from "../ui/CartModal";
 export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const cartItemsLenth = useSelector((state) => state.cart.items).length;
 
-  const { logout, isAuthenticated, user } = useAuth0();
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+
   const [query, setQuery] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [filterdItems, setFilterItems] = useState(["mensCloth"]);
   const inputRef = useRef();
-  const nav = useNavigate();
   const [isMenuActive, setMenuActive] = useState(false);
   const menu = useSelector((state) => state.menu.value);
-  const dispatch = useDispatch();
   // handle side bar toggle
   const handleMenuClick = () => {
     setMenuActive(!isMenuActive);
@@ -105,26 +95,9 @@ export default function Header() {
             {/* Cart & Profile */}
             <div className="flex items-center gap-6">
               <div className="flex items-center">
-                <Link to="/cart">
-                  <button
-                    onClick={() => {
-                      if (!isAuthenticated) {
-                        setIsModalOpen(true);
-                      } else {
-                        dispatch(isOpen(true));
-                      }
-                    }}
-                    className="flex items-center hover:text-gray-200"
-                  >
-                    <ShoppingCart className="w-6 h-6" />
-                    <span className="ml-2">Cart</span>
-                    {cartItemsLenth >= 0 && (
-                      <span className="ml-1 bg-white text-[#DC143C] text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                        {cartItemsLenth}
-                      </span>
-                    )}
-                  </button>
-                </Link>
+                <div className="= text-white ">
+                  <CartModal />
+                </div>
               </div>
 
               {/* Profile Dropdown */}
@@ -135,7 +108,7 @@ export default function Header() {
                 >
                   <User className="w-6 h-6" />
                   <span className="mx-2">
-                    {isAuthenticated ? user.name : "login"}
+                    {isAuthenticated ? "profile" : "login"}
                   </span>
                   <ChevronDown className="w-4 h-4" />
                 </button>
@@ -159,25 +132,7 @@ export default function Header() {
                     <div className="border-t border-gray-700 my-1" />
 
                     {/* log in sign In */}
-                    <div className="flex justify-center items-center">
-                      <button
-                        onClick={() => {
-                          if (isAuthenticated) {
-                            logout({
-                              logoutParams: {
-                                returnTo: window.location.origin,
-                              },
-                            });
-                          } else {
-                            nav("/login");
-                          }
-                        }}
-                        className="bg-red-500 text-white px-4 py-1 my-1 
-                        rounded ml-2 cursor-pointer hover:bg-red-600"
-                      >
-                        {isAuthenticated ? "Log out" : "Sign In"}
-                      </button>
-                    </div>
+                    {isAuthenticated ? <LogoutButton /> : <LoginModal />}
                   </div>
                 )}
               </div>

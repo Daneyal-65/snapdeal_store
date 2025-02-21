@@ -2,14 +2,13 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Prodoctstore } from "../constants/data";
 
-import { useAuth0 } from "@auth0/auth0-react";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../store/menu";
+import { searchProducts } from "../api/products";
 export default function productListByCategoryPage() {
   // to store categorized data
   const [products, setProducts] = useState([]);
 
-  const { isAuthenticated } = useAuth0(); // authentication
   // get category from url using hook
   const { category } = useParams();
   // console.log(category);
@@ -21,7 +20,7 @@ export default function productListByCategoryPage() {
   // navigate to product detail page with updated state
   const handleDetailsPage = (product) => {
     // dispatch(updateDetails(product));
-    navigate(`/product-details/${product.id}`);
+    navigate(`/product-details/${product._id}`);
   };
   // handling wishedList and authenticating
   // console.log(category);
@@ -32,14 +31,12 @@ export default function productListByCategoryPage() {
       dispatch(toggleMenu(true));
     }
     if (category) {
-      const filteredItem = Prodoctstore.filter((item) => {
-        if (category === "groceries") {
-          return item.category === "electronics" || item.category === category;
-        }
-        return item.category === category;
+      searchProducts(category).then((res) => {
+        console.log("byCategory: ", res);
+        const newData = res;
+
+        setProducts(newData);
       });
-      filteredItem.sort((a, b) => b.id - a.id);
-      setProducts(filteredItem);
     }
   }, [category]);
   return (
@@ -63,8 +60,10 @@ export default function productListByCategoryPage() {
             className=" cursor-pointer"
             onClick={() => handleDetailsPage(product)}
           >
-            <p className="mt-2 font-medium">{product.title}</p>
-            <p className="text-red-500 font-bold">${product.price}</p>
+            <p className="mt-2 font-medium">{product.name}</p>
+            <p className="text-red-500 font-bold">
+              ₹{Math.floor(product.price)}.0
+            </p>
           </div>
         </div>
       ))}

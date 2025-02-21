@@ -8,7 +8,7 @@ import { toggleMenu } from "../store/menu";
 const HomePage = () => {
   const dispatch = useDispatch();
   const isActiveMenu = useSelector((state) => state.menu.value);
-  // console.log(isActiveMenu);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY >= 780 && !isActiveMenu) {
@@ -20,14 +20,14 @@ const HomePage = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll); // ✅ Proper cleanup
-  }); // ✅ Added dependencies
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [dispatch, isActiveMenu]);
 
   return (
     <div className="max-auto mb-20">
-      <div className="max-w-[1400px] mx-auto px-4 lg:px-8 flex w-full mb-20">
-        {/* Sidebar */}
-        <div className="w-1/5 hidden lg:block">
+      <div className="max-w-[1400px] mx-auto px-4 lg:px-8 flex flex-col lg:flex-row w-full mb-20">
+        {/* Sidebar - Visible on large screens */}
+        <div className="w-full lg:w-1/5 hidden lg:block">
           <Sidebar />
         </div>
 
@@ -35,7 +35,9 @@ const HomePage = () => {
         <div className="w-full lg:w-4/5 flex flex-col h-full">
           <Banner />
           <div className="py-6">
-            <h2 className="text-2xl font-bold mb-4">Trending Products</h2>
+            <h2 className="text-2xl font-bold mb-4 text-center lg:text-left">
+              Trending Products
+            </h2>
             <TrendingProducts />
           </div>
         </div>

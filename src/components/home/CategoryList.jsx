@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { Link } from "lucide-react";
 import { navItems } from "../../constants/links";
 import { useNavigate } from "react-router-dom";
 

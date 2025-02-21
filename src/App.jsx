@@ -4,32 +4,39 @@ import Navbar from "./ui/Navbar";
 import Footer from "./ui/Footer";
 import ProtectedRoutes from "./auth/protected";
 import Loading from "./ui/Loader";
-import { useAuth0 } from "@auth0/auth0-react";
-import { useSelector } from "react-redux";
-import { updateUser } from "./api";
+import { useDispatch, useSelector } from "react-redux";
+import { userLoggedIn } from "./store/auth";
+import { getCartAsync } from "./store/cart";
 
 // Lazy load pages
 const Home = lazy(() => import("./pages/HomePage"));
-const Cart = lazy(() => import("./pages/CartPage"));
+const LoginPage = lazy(() => import("./auth/loginPage"));
 const ProductListByCategoryPage = lazy(() =>
   import("./pages/productListByCategoryPage")
 );
 const ProductDetailsPage = lazy(() => import("./pages/productDetailsPage"));
 const CheckoutPage = lazy(() => import("./pages/CheckOut"));
-const Login = lazy(() => import("./auth/login"));
 function App() {
-  const { isAuthenticated, user } = useAuth0();
   const isOpen = useSelector((state) => state.cart.toggle);
   const [loading, setLoading] = useState(true);
+  const dispatch = useDispatch();
+
+  const checkAuthentication = () => {
+    const token = localStorage.getItem("token");
+    if (!token) return false;
+    return true;
+  };
+
   useEffect(() => {
-    if (isAuthenticated && user) {
-      updateUser(user);
+    if (checkAuthentication()) {
+      dispatch(userLoggedIn());
+      dispatch(getCartAsync());
     }
     const loadTime = setTimeout(() => {
       setLoading(false);
     }, 1200);
     return () => clearTimeout(loadTime);
-  }, [isAuthenticated, user]);
+  }, []);
 
   return (
     <BrowserRouter>
@@ -45,7 +52,8 @@ function App() {
         ) : (
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
+            <Route path="/login" element={<LoginPage />} />
+
             <Route
               path="/product-details/:id"
               element={<ProductDetailsPage />}
@@ -62,15 +70,6 @@ function App() {
               element={
                 <ProtectedRoutes>
                   <CheckoutPage />
-                </ProtectedRoutes>
-              }
-            />
-
-            <Route
-              path="/cart"
-              element={
-                <ProtectedRoutes>
-                  <Cart />
                 </ProtectedRoutes>
               }
             />

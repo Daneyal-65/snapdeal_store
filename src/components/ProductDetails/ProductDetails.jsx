@@ -1,33 +1,50 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import ProductSpecifications from "./extraDetails";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../../store/menu";
-import { addToCart } from "../../store/cart";
-import { Prodoctstore } from "../../constants/data";
+import { addToCart, addToCartAsync } from "../../store/cart";
+import { getProductById } from "../../api/products";
 
 const ProductDetails = () => {
   const [product, setProduct] = useState({});
   const { id } = useParams();
   const dispatch = useDispatch();
+  const nav = useNavigate();
   const menu = useSelector((state) => state.menu.value);
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   useEffect(() => {
     if (!menu) {
       dispatch(toggleMenu(true));
     }
 
-    axios
-      .get("https://fakestoreapi.com/products")
+    getProductById(id)
       .then((res) => {
-        let foundProduct = res.data.find((prod) => prod.id === Number(id));
-        foundProduct =
-          foundProduct || Prodoctstore.find((prod) => prod.id === Number(id));
-        setProduct(foundProduct || {});
+        setProduct(res || {});
         // console.log(product);
       })
       .catch((error) => console.error("Error fetching product:", error));
   }, [id]);
+
+  const handleAddToCart = async (product) => {
+    try {
+      if (!isAuthenticated) {
+        nav("/login");
+        return;
+      }
+      dispatch(addToCart(product));
+      // Call the API to add the product to the cart
+      dispatch(
+        addToCartAsync({
+          product: product._id,
+          quantity: 1,
+        })
+      );
+    } catch (error) {
+      console.error("Failed to add product to cart:", error);
+    }
+  };
 
   return (
     <div className="max-w-[1200px] mx-auto px-4 lg:px-8 py-6">
@@ -68,22 +85,25 @@ const ProductDetails = () => {
           {/* Price Details */}
           <div className="mt-4">
             <p className="text-red-600 text-2xl font-bold">
-              Rs. {product?.price || "N/A"}
+              Rs. {Math.floor(product?.price)}.0
             </p>
           </div>
 
           {/* Buttons */}
           <div className="flex gap-4 mt-6">
-            <button
-              className="bg-black text-white px-6 py-2 rounded-md hover:bg-gray-900"
-              onClick={() => dispatch(addToCart(product))}
-            >
-              ADD TO CART
-            </button>
-            <Link to={`/checkout/${product.id}`}>
+            <Link to={`/checkout/${product._id}`}>
+              <button
+                className="bg-black text-white px-6 py-2 rounded-md hover:bg-gray-900"
+                onClick={() => handleAddToCart(product)}
+              >
+                ADD TO CART
+              </button>
+            </Link>
+
+            <Link to={`/checkout/${product._id}`}>
               <button
                 className="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700"
-                onClick={() => dispatch(addToCart(product))}
+                onClick={() => handleAddToCart(product)}
               >
                 BUY NOW
               </button>

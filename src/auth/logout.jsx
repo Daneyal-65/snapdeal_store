@@ -1,20 +1,26 @@
-import { useAuth0 } from "@auth0/auth0-react";
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { userLogout } from "../store/auth";
 
 const LogoutButton = () => {
   // get all the required states and funtion from Auth0
-  const { logout, isAuthenticated } = useAuth0();
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const dispatch = useDispatch();
 
   return (
     isAuthenticated && (
       // {if user authenticated then it will display : (logout Button)}
       <button
-        onClick={() =>
-          logout({ logoutParams: { returnTo: window.location.origin } })
-        }
+        onClick={() => {
+          dispatch(userLogout());
+          window.location.reload();
+        }}
         className="text-white bg-blue-700 hover:bg-blue-800 
         
-        focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+        focus:ring-4 focus:ring-blue-300 font-medium rounded-lg
+         text-sm px-5 py-2  ml-2 my-1 dark:bg-blue-600
+          dark:hover:bg-blue-700 focus:outline-none
+           dark:focus:ring-blue-800"
       >
         Log Out
       </button>
