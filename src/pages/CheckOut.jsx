@@ -30,7 +30,7 @@ const CheckoutPage = () => {
 
   // Function to get the quantity of the product in the cart
   const getQuantity = (id) => {
-    const quantity = cart.find((cart) => cart.product._id === id);
+    const quantity = cart.find((cart) => cart.product?._id === id);
     return quantity ? quantity.quantity : "0";
   };
 
