@@ -32,7 +32,7 @@ const HomePage = () => {
         </div>
 
         {/* Main Content */}
-        <div className="w-full lg:w-4/5 flex flex-col h-full">
+        <div className="w-full lg:w-4/5 flex flex-col h-full pl-2">
           <Banner />
           <div className="py-6">
             <h2 className="text-2xl font-bold mb-4 text-center lg:text-left">

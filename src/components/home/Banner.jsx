@@ -35,7 +35,7 @@ export default function Banner() {
 
   return (
     <>
-      <div className="relative w-[90%] h-[300px] overflow-hidden px-4">
+      <div className="relative md:w-[90%] h-[300px] overflow-hidden px-4">
         {/* Map through images and display slides */}
         {images.map((src, index) => (
           <div
@@ -54,7 +54,7 @@ export default function Banner() {
         ))}
       </div>
       {/* Navigation Dots */}
-      <div className="flex justify-between w-[90%] my-2 text-gray-600 text-sm">
+      <div className="flex justify-between md:w-[90%] my-2 text-gray-600 text-sm gap-1 md:gap-0">
         {carouselNavigationButtons.map((label, index) => (
           <button
             key={index}

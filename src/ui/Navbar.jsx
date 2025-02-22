@@ -8,18 +8,19 @@ import { Link, useNavigate } from "react-router-dom";
 import LogoutButton from "../auth/logout";
 import LoginModal from "../auth/LoginModal";
 import CartModal from "../ui/CartModal";
+import MobileNav from "./mobileNav";
 export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
 
   const [query, setQuery] = useState("");
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [filterdItems, setFilterItems] = useState(["mensCloth"]);
   const inputRef = useRef();
   const [isMenuActive, setMenuActive] = useState(false);
   const menu = useSelector((state) => state.menu.value);
   // handle side bar toggle
+  const nav = useNavigate();
   const handleMenuClick = () => {
     setMenuActive(!isMenuActive);
   };
@@ -34,10 +35,22 @@ export default function Header() {
     });
     setFilterItems(filteredSearchItems);
   };
+
   return (
     <nav className=" mx-auto z-10 fixed top-0 right-0 left-0">
       <TopBanner />
-      <div className="border-b border-gray-200 bg-[#DC143C]">
+      <div className="flex md:hidden">
+        <MobileNav
+          query={query}
+          handleSearch={handleSearch}
+          filterdItems={filterdItems}
+          inputRef={inputRef}
+          menu={true}
+          handleMenuClick={handleMenuClick}
+          setQuery={setQuery}
+        />
+      </div>
+      <div className="border-b border-gray-200 bg-[#DC143C]  hidden md:block ">
         {/* {top banner} */}
         <div className="max-w-7xl mx-auto px-4 relative">
           {/* Main header */}
@@ -70,7 +83,13 @@ export default function Header() {
                   onChange={(e) => handleSearch(e)}
                   value={query}
                 />
-                <button className="bg-gray-800 text-white px-6 py-2 rounded-r flex items-center hover:bg-gray-700">
+                <button
+                  className="bg-gray-800 text-white px-6 py-2 rounded-r flex items-center hover:bg-gray-700"
+                  onClick={() => {
+                    setQuery("");
+                    nav("/productlist/women's clothing");
+                  }}
+                >
                   <Search className="w-5 h-5" />
                   <span className="ml-2">Search</span>
                 </button>
@@ -80,12 +99,18 @@ export default function Header() {
                   px-2 py-1 "
                   >
                     {filterdItems.map((item) => (
-                      <li
-                        className="shadow-2xl border-amber-400 hover:bg-white transition-all duration-100 rounded px-1"
+                      <Link
                         key={item}
+                        to={"/productlist/women's clothing"}
+                        onClick={() => setQuery("")}
                       >
-                        {item}
-                      </li>
+                        <li
+                          className="shadow-2xl border-amber-400 hover:bg-white transition-all duration-100 rounded px-1"
+                          key={item}
+                        >
+                          {item}
+                        </li>
+                      </Link>
                     ))}
                   </ul>
                 )}
@@ -150,9 +175,11 @@ export default function Header() {
 
 function TopBanner() {
   return (
-    <div className="bg-[#702433]  text-white px-4 py-1 text-sm flex justify-between items-center shadow-2xl">
-      <div>Brand Waali Quality, Bazaar Waali Deal!</div>
-      <div className="flex items-center gap-4">
+    <div className="bg-[#702433]  text-white px-4 py-0 md:py-1 text-sm flex flex-col justify-between items-center shadow-2xl md:flex-row">
+      <div className="text-[10px] md:text-[14px]">
+        Brand Waali Quality, Bazaar Waali Deal!
+      </div>
+      <div className="flex items-center gap-4 text-[10px] md:text-[14px]">
         <Link to="#" className="hover:underline">
           Our Blog
         </Link>
